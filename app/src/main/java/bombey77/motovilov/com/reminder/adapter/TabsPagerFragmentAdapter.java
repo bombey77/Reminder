@@ -21,20 +21,23 @@ public class TabsPagerFragmentAdapter extends FragmentPagerAdapter {
         super(fm);
         this.context = context;
 
-        /*tabs = new String[] {
-                "Tab 1",
-                "Tab 2",
-                "Tab 3"
-        };*/
-
         tabs = new String[3];
-        tabs[0] = context.getString(R.string.tab_layout_one);
-        tabs[1] = context.getString(R.string.tab_layout_two);
-        tabs[2] = context.getString(R.string.tab_layout_three);
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
+        switch (position) {
+            case 0:
+                tabs[0] = context.getString(R.string.tab_layout_tasks);
+                break;
+            case 1:
+                tabs[1] = context.getString(R.string.tab_layout_inbox);
+                break;
+            case 2:
+                tabs[2] = context.getString(R.string.tab_layout_birthdays);
+                break;
+        }
+
         return tabs[position];
     }
 

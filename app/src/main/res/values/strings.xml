@@ -6,7 +6,8 @@
 
     <string name="menu_search">Search</string>
 
-    <string name="tab_layout_one">First</string>
-    <string name="tab_layout_two">Second</string>
-    <string name="tab_layout_three">Third</string>
+    <string name="tab_layout_tasks">Tasks</string>
+    <string name="tab_layout_inbox">Inbox</string>
+    <string name="tab_layout_birthdays">Birthdays</string>
+    <string name="create_your_first_case">Create your first task</string>
 </resources>
