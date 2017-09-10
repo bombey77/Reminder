@@ -1,9 +1,11 @@
 package bombey77.motovilov.com.reminder.adapter;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import bombey77.motovilov.com.reminder.R;
 import bombey77.motovilov.com.reminder.fragment.ExampleFragment;
 
 /**
@@ -13,15 +15,22 @@ import bombey77.motovilov.com.reminder.fragment.ExampleFragment;
 public class TabsPagerFragmentAdapter extends FragmentPagerAdapter {
 
     private String[] tabs;
+    Context context;
 
-    public TabsPagerFragmentAdapter(FragmentManager fm) {
+    public TabsPagerFragmentAdapter(FragmentManager fm, Context context) {
         super(fm);
+        this.context = context;
 
-        tabs = new String[] {
+        /*tabs = new String[] {
                 "Tab 1",
                 "Tab 2",
                 "Tab 3"
-        };
+        };*/
+
+        tabs = new String[3];
+        tabs[0] = context.getString(R.string.tab_layout_one);
+        tabs[1] = context.getString(R.string.tab_layout_two);
+        tabs[2] = context.getString(R.string.tab_layout_three);
     }
 
     @Override
