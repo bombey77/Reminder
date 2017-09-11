@@ -1,8 +1,8 @@
 package bombey77.motovilov.com.reminder.fragment;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,15 +13,16 @@ import bombey77.motovilov.com.reminder.R;
  * Created by Ромашка on 09.09.2017.
  */
 
-public class ExampleFragment extends Fragment {
+public class TasksFragment extends AbstractTabsFragment {
 
-    private View view;
 
-    public static ExampleFragment getInstance() {
+    public static TasksFragment getInstance(Context context) {
         Bundle bundle = new Bundle();
-        ExampleFragment exampleFragment = new ExampleFragment();
-        exampleFragment.setArguments(bundle);
-        return exampleFragment;
+        TasksFragment tasksFragment = new TasksFragment();
+        tasksFragment.setArguments(bundle);
+        tasksFragment.setContext(context);
+        tasksFragment.setTitle(context.getString(R.string.tab_layout_tasks));
+        return tasksFragment;
     }
 
     @Nullable
@@ -30,4 +31,9 @@ public class ExampleFragment extends Fragment {
         view = inflater.inflate(R.layout.fragmetn_layout, container, false);
         return view;
     }
+
+    public void setContext(Context context) {
+        this.context = context;
+    }
+
 }
