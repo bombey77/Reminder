@@ -17,7 +17,7 @@ public class TabsPagerFragmentAdapter extends FragmentPagerAdapter {
     private String[] tabs;
     Context context;
 
-    public TabsPagerFragmentAdapter(FragmentManager fm, Context context) {
+    public TabsPagerFragmentAdapter(Context context, FragmentManager fm) {
         super(fm);
         this.context = context;
 
