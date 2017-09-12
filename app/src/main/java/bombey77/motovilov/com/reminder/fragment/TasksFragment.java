@@ -15,7 +15,6 @@ import bombey77.motovilov.com.reminder.R;
 
 public class TasksFragment extends AbstractTabsFragment {
 
-
     public static TasksFragment getInstance(Context context) {
         Bundle bundle = new Bundle();
         TasksFragment tasksFragment = new TasksFragment();
@@ -28,7 +27,7 @@ public class TasksFragment extends AbstractTabsFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragmetn_layout, container, false);
+        view = inflater.inflate(R.layout.inbox_layout, container, false);
         return view;
     }
 
